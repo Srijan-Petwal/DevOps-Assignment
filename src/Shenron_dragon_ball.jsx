@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Dragon(props) {
-  const { nodes, materials } = useGLTF('/assets/shenron_dragon_ball.glb')
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}assets/shenron_dragon_ball.glb`)
   return (
     <group {...props} dispose={null}>
       <group position={[-5.587, 5.538, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -64,4 +64,4 @@ export default function Dragon(props) {
   )
 }
 
-useGLTF.preload('/assets/shenron_dragon_ball.glb')
+useGLTF.preload(`${import.meta.env.BASE_URL}assets/shenron_dragon_ball.glb`)

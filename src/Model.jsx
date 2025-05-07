@@ -19,7 +19,7 @@ export default function Model(props) {
   // })
 
   const group = React.useRef()
-  const { scene, animations } = useGLTF('./assets/model.gltf')
+  const { scene, animations } = useGLTF(`${import.meta.env.BASE_URL}assets/model.gltf`)
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
@@ -40,4 +40,5 @@ console.log(materials)
   
 }
 
-useGLTF.preload('./assets/model.gltf')
+useGLTF(`${import.meta.env.BASE_URL}assets/scene.gltf`);
+

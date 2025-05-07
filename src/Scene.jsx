@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Scene(props) {
-  const { nodes, materials } = useGLTF('/assets/scene.gltf')
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}assets/scene.gltf`)
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.004}>
@@ -241,4 +241,4 @@ export default function Scene(props) {
   )
 }
 
-useGLTF.preload('/assets/scene.gltf')
+useGLTF.preload(`${import.meta.env.BASE_URL}assets/scene.gltf`)
