@@ -40,5 +40,5 @@ console.log(materials)
   
 }
 
-useGLTF(`${import.meta.env.BASE_URL}assets/scene.gltf`);
+useGLTF(`/assets/scene.gltf`);
 
